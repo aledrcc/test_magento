@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<!-- app/design/frontend/base/default/layout/day_two/custom.xml -->
+
+<layout>
+
+    <!--
+    <default>
+        <reference name="content">
+            <block type="core/text" name="oops">
+                <action method="setText">
+                    <arg><![CDATA[<h1>This is some text!</h1>]]></arg>
+                </action>
+            </block>
+        </reference>
+    </default>
+    -->
+
+    <catalog_product_view> <!-- El layout file se carga siempre, pero esto solo aparece en el product_view -->
+
+        <!--
+        <reference name="content">
+            <block type="core/text" name="oops">
+                <action method="setText">
+                    <arg><![CDATA[<h1>This is some text!</h1>]]></arg>
+                </action>
+            </block>
+        </reference>
+        -->
+
+        <!-- Para que lo siguiente haga algo hay que llamar a getThisDoesntExist desde algun lado -->
+        <reference name="product.info">
+            <action method="setThisDoesntExist">
+                <abcdefg>This is a string!</abcdefg> <!-- El nombre de este nodo no importa -->
+            </action>
+        </reference>
+    </catalog_product_view>
+
+    <cool_handle>
+        <block type="core/template"
+               name="some.name"
+               output="toHtml"
+               template="some/template.phtml">
+
+            <!-- como el parent no es core/text_list esto no aparece solo -->
+            <block type="core/text" name="some.otherBlock">
+                <action method="setText">
+                    <arg>Some text for us!</arg>
+                </action>
+            </block>
+        </block>
+    </cool_handle>
+
+    <day_two_render_handle> <!-- esto es la body class al entrar a custom/render/handle -->
+        <update handle="cool_handle" /> <!-- agrega las instrucciones de cool_handle aca -->
+    </day_two_render_handle>
+
+</layout>

@@ -1,0 +1,5 @@
+<!-- Para que funcione esto tiene que ir en app/design/frontend/base/default/template/some/template.phtml -->
+
+<h1>This is some template!</h1>
+<!-- como este block no es core/text_list los children no aparecen solos -->
+<?php echo $this->getChildHtml("some.otherBlock"); ?>

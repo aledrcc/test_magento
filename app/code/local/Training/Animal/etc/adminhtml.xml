@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<!-- app/code/local/Training/Animal/etc/adminhtml.xml -->
+
+<config>
+    <!-- item en el menu -->
+    <menu>
+        <catalog>
+            <children>
+                <training translate="title">
+                    <title>Manage Animals</title>
+                    <sort_order>40</sort_order>
+                    <children>
+                        <stalls translate="title">
+                            <title><![CDATA[What's in my Zoo]]></title>
+                            <sort_order>2</sort_order>
+                            <action>adminhtml/animal/index</action>
+                        </stalls>
+                    </children>
+                </training>
+            </children>
+        </catalog>
+    </menu>
+
+    <!-- permisos -->
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <catalog>
+                        <children>
+                            <training>
+                                <title>Animal Permissions</title>
+                                <sort_order>40</sort_order>
+                                <children>
+                                    <stalls translate="title">
+                                        <title><![CDATA[What's in my Zoo]]></title>
+                                        <sort_order>2</sort_order>
+                                    </stalls>
+                                </children>
+                            </training>
+                        </children>
+                    </catalog>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <training translate="title" module="training">
+                                        <title>Training Animal Section</title>
+                                        <sort_order>555</sort_order>
+                                    </training>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

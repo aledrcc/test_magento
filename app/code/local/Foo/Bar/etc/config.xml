@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<config>
+    <frontend> <!-- frontend | adminhtml -->
+        <routers>
+            <foo_bar> <!-- unique for routers -->
+                <use>standard</use> <!-- standard (frontend) | admin (adminhtml) -->
+                <args>
+                    <module>Foo_Bar</module> <!-- igual al nombre en modules en Foo_Bar.xml -->
+                    <frontName>foo</frontName> <!-- primera parte del URL -->
+                </args>
+            </foo_bar>
+
+            <!-- en el body vi que la clase es catalog-category-view -->
+            <catalog>
+                <args>
+                    <modules> <!-- con S !!! -->
+                        <foo_bar before='Mage_Catalog'>Foo_Bar_Catalog</foo_bar>
+                        <!-- esto se traduce a Foo/Bar/controllers/Catalog !!! -->
+                    </modules>
+                </args>
+            </catalog>
+        </routers>
+    </frontend>
+
+    <global>
+        <models>
+            <foo_bar>
+                <class>Foo_Bar_Model</class>
+            </foo_bar>
+        </models>
+    </global>
+
+    <frontend> <!-- global | frontend | admin | adminhtml (backend) -->
+        <events>
+            <catalog_product_load_after> <!-- event -->
+                <observers>
+                    <foo_bar> <!-- unique for event -->
+                        <type>model</type> <!-- model | singleton | disabled -->
+                        <class>foo_bar/observer</class>
+                        <method>catalogProductLoadAfter</method>
+                    </foo_bar>
+                </observers>
+            </catalog_product_load_after>
+        </events>
+    </frontend>
+</config>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<!-- app/design/adminhtml/default/default/layout/training/animal.xml -->
+<!-- @see app/code/local/Training/Animal/etc/config.xml -->
+<!-- config/adminhtml/layout/updates/training/file node -->
+
+<layout>
+    <adminhtml_animal_list>
+        <reference name="content">
+            <block type="training/adminhtml_animal" name="training.animal.list" />
+        </reference>
+    </adminhtml_animal_list>
+
+    <adnimhtml_animal_grid> <!-- For AJAX grid action -->
+        <remove name="root" />
+        <block type="training/adminhtml_animal_grid"
+               name="training.animal.grid"
+               output="toHtml" />
+    </adnimhtml_animal_grid>
+
+    <adminhtml_animal_edit>
+        <reference name="content">
+            <block type="training/adminhtml_animal_edit"
+                   name="training.animal.form" />
+        </reference>
+        <reference name="left">
+            <block type="training/adminhtml_animal_edit_tabs"
+                   name="training.animal.tabs" />
+        </reference>
+    </adminhtml_animal_edit>
+</layout>

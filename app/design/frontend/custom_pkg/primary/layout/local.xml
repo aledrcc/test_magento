@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<!-- app/design/frontend/custom_pkg/primary/layout/local.xml -->
+
+<layout>
+    <!-- estoy tratando de mover la poll de la derecha al izquierda -->
+    <!-- no hace nada porque en esta version no hay poll =S -->
+    <default>
+
+        <reference name="right">
+            <action method="unsetChild"><name>right.poll</name></action>
+        </reference>
+
+        <reference name="left">
+            <action method="insert">
+                <name>right.poll</name>
+                <sibling>enterprisecatalog.leftnav</sibling>
+            </action>
+        </reference>
+
+    </default>
+
+    <!-- necesario para que funcione (???) (algo que ver con un update) -->
+    <catalog_category_layered>
+
+    </catalog_category_layered>
+
+</layout>

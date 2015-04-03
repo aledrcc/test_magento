@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<!-- app/code/local/Training/Animal/etc/config.xml -->
+
+<config>
+
+    <modules>
+        <Training_Animal>
+            <version>0.2.3</version> <!-- para que funcione la version tiene que ser >= a 0.1.1 (debido a los setup que hice)    -->
+        </Training_Animal>
+    </modules>
+
+    <global>
+
+        <blocks>
+            <training>
+                <class>Training_Animal_Block</class>
+            </training>
+        </blocks>
+
+        <helpers>
+            <training>
+                <class>Training_Animal_Helper</class>
+            </training>
+        </helpers>
+
+        <models>
+            <training>
+                <class>Training_Animal_Model</class>
+                <resourceModel>training_animal_resource</resourceModel>
+            </training>
+
+            <training_animal_resource>
+                <class>Training_Animal_Model_Mysql4</class>
+                <entities>
+                    <animal><table>training_animal_entity</table></animal>
+                </entities>
+            </training_animal_resource>
+        </models>
+
+        <resources>
+            <training_animal_setup>
+                <setup>
+                    <module>Training_Animal</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </training_animal_setup>
+        </resources>
+
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <training after="Mage_Adminhtml">Training_Animal_Adminhtml</training>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <training>
+                    <file>training/animal.xml</file>
+                </training>
+            </updates>
+        </layout>
+        <!-- desactivado para que no llene al pedo el admin.log
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <training_animal>
+                        <type>model</type>
+                        <class>training/observer</class>
+                        <method>controllerActionPredispatch</method>
+                    </training_animal>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+        -->
+    </adminhtml>
+
+</config>

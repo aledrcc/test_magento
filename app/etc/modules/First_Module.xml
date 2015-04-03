@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+    <!-- Esto hace que lea el config.xml en local/First/Module/etc
+    <modules>
+        <First_Module>
+            <active>true</active>
+            <codePool>local</codePool>
+        </First_Module>
+    </modules>
+    -->
+    <global>
+        <blocks>
+            <catalog>
+                <rewrite>
+                    <product_view>First_Module_Block_Product_View</product_view>
+                </rewrite>
+            </catalog>
+        </blocks>
+
+        <helpers>
+            <customer>
+                <rewrite>
+                    <address>First_Module_Helper_Address</address>
+                </rewrite>
+            </customer>
+            <sales>
+                <rewrite>
+                    <data>First_Module_Helper_Data</data>
+                </rewrite>
+            </sales>
+        </helpers>
+
+        <models>
+            <catalog>
+                <rewrite>
+                    <product>First_Module_Model_Product</product>
+                </rewrite>
+            </catalog>
+            <catalog_resource>
+                <rewrite>
+                    <!-- El nombre este esta mal, es para mostrar que puede ser diferente, deberia ser sin Resource_Model?-->
+                    <product>First_Module_Model_Product_Resource_Model</product>
+                </rewrite>
+            </catalog_resource>
+        </models>
+    </global>
+</config>

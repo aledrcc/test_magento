@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<!--app/code/local/Ale/Installer/etc/config.xml-->
+
+<config>
+
+    <modules>
+        <Ale_Installer>
+            <version>0.1.0</version>
+        </Ale_Installer>
+    </modules>
+
+    <global>
+        <models>
+            <ale_installer>
+                <class>Ale_Installer_Model</class>
+            </ale_installer>
+        </models>
+
+        <resources>
+            <ale_installer_setup>
+                <setup>
+                    <module>Ale_Installer</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </ale_installer_setup>
+        </resources>
+    </global>
+
+</config>
+
+

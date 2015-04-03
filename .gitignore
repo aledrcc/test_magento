@@ -1,0 +1,36 @@
+#SOs
+Thumbs.db
+*~
+._*
+.DS_Store
+
+#IDEs
+nbproject
+.idea
+
+#Magento
+/var/
+/media/
+/downloader/
+/app/etc/local.xml
+maintenance.flag
+skin/frontend/battery/battery/scss/.sass-cache/
+test.php
+
+# Commerce bug
+/app/code/local/Sebastianjuffar/
+/app/code/local/Russellalbin/
+/js/commercebug/
+/app/etc/modules/Sebastianjuffar_Commercebug.xml
+/app/etc/modules/Russellalbin_Commercebug.xml
+
+# Uploader paths
+/uploader/.htpasswd
+/uploader/.htaccess
+
+#Sass/Compass/Ruby
+skin/frontend/battery/battery/scss/content/config.rb
+skin/frontend/battery/battery/scss/content/.sass-cache/
+
+#htaccess
+.htaccess

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Training_Animal> <!-- Namespace_Module -->
+            <active>true</active>
+            <codePool>local</codePool>
+        </Training_Animal>
+    </modules>
+</config>

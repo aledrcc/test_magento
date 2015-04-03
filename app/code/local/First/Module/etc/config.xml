@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <default>
+        <some>
+            <random>
+                <xpath>Value</xpath>
+            </random>
+        </some>
+    </default>
+</config>

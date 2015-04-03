@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<config>
+    <global>
+        <blocks>
+            <day_two> <!-- class gorup -->
+                <class>Day_Two_Block</class> <!-- path to object types -->
+                <!-- Mage::app()->getLayout('day_two/____') (???) -->
+            </day_two>
+
+            <!--
+            <catalog>
+                <rewrite>
+                    <product_view>Day_Two_Block_Catalog_Product_View</product_view>
+                </rewrite>
+            </catalog>
+            -->
+
+            <!--
+            <page>
+                <rewrite>
+                    <html_breadcrumbs>Day_Two_Block_Html_Breadcrumbs</html_breadcrumbs>
+                </rewrite>
+            </page>
+            -->
+        </blocks>
+        <helpers>
+            <day_two>
+                <class>Day_Two_Helper</class>
+                <!-- Mage::helper('day_two/____') -->
+            </day_two>
+        </helpers>
+        <models>
+            <day_two>
+                <class>Day_Two_Model</class>
+                <!-- Mage::getModel('day_two/____') -->
+            </day_two>
+        </models>
+    </global>
+
+    <frontend>
+        <routers>
+            <day_two>
+                <use>standard</use>
+                <args>
+                    <module>Day_Two</module>
+                    <frontName>custom</frontName>
+                </args>
+            </day_two>
+        </routers>
+
+        <layout>
+            <updates>
+                <bens_layout> <!-- Tiene que ser un nodo unico. No es usado para el path del file. -->
+                    <file>day_two/custom.xml</file>
+                </bens_layout>
+            </updates>
+        </layout>
+    </frontend>
+</config>
