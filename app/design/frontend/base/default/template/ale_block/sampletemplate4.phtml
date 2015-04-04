@@ -1,0 +1,14 @@
+<!-- Para que funcione esto tiene que ir en app/design/frontend/base/default/template/ale_block/sampletemplate.phtml -->
+
+<?php ?>
+
+<h1>Hello world</h1>
+<p>
+    <?php
+        //Si no aclaro el child, trae a todos
+        echo $this->getChildHtml();
+    ?>
+</p>
+<p>
+The second paragraph is hard coded
+</p>

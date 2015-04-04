@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<!--app/code/local/Ale/Block/etc/config.xml-->
+
+<config>
+
+    <modules>
+        <Ale_Block>
+            <version>0.1.0</version>
+        </Ale_Block>
+    </modules>
+
+    <global>
+        <blocks>
+            <ale_block>
+                <class>Ale_Block_Block</class>
+            </ale_block>
+        </blocks>
+    </global>
+
+    <frontend>
+        <routers>
+            <ale_block>
+                <use>standard</use>
+                <args>
+                    <module>Ale_Block</module>
+                    <frontName>block</frontName>
+                </args>
+            </ale_block>
+        </routers>
+    </frontend>
+
+</config>
