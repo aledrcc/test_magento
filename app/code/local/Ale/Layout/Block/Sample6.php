@@ -1,12 +1,12 @@
 <?php
 
-//app/code/local/Ale/Block/Block/Sample8.php
+//app/code/local/Ale/Layout/Block/Sample6.php
 
-class Ale_Block_Block_Sample8 extends Mage_Core_Block_Template
+class Ale_Layout_Block_Sample6 extends Mage_Core_Block_Template
 {
     public function _construct()
     {
-        $this->setTemplate('ale_block/sampletemplate8.phtml');
+        $this->setTemplate('ale_layout/sampletemplate6.phtml');
         return parent::_construct();
     }
 

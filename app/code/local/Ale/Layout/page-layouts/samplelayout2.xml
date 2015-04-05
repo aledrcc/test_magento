@@ -1,0 +1,3 @@
+<layout>
+    <block type="ale_layout/sample1" name="root" output="toHtml" />
+</layout>

@@ -1,0 +1,11 @@
+<layout>	
+	<block type="ale_layout/template3" name="root" template="ale_layout/2col3.phtml" output="toHtml">
+		<block type="ale_layout/template3" name="additional_head" template="ale_layout/head3.phtml" />
+
+		<block type="ale_layout/template3" name="sidebar">
+			<action method="setTemplate"><template>ale_layout/sidebar3.phtml</template></action>
+		</block>
+
+		<block type="core/text_list" name="content" />
+	</block>	
+</layout>

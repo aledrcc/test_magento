@@ -1,0 +1,10 @@
+<!--El nombre es namespace_module_controllerName_actionName-->
+
+<reference name="content">
+    <block type="core/text" name="our_message">
+        <action method="setText"><text>
+            Sidebar? We don't need a sidebar!
+        </text></action>
+    </block>
+</reference>
+<remove name="sidebar" />

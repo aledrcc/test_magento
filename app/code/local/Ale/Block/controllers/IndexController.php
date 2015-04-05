@@ -4,20 +4,6 @@
 
 class Ale_Block_IndexController extends Mage_Core_Controller_Front_Action
 {
-    public function template8Action()
-    {
-        $layout = Mage::getSingleton('core/layout');
-        $xml = simplexml_load_string('
-            <layout>
-                <block type="ale_block/sample8" name="root" output="toHtml" />
-            </layout>
-        ', 'Mage_Core_Model_Layout_Element');
-
-        $layout->setXml($xml);
-        $layout->generateBlocks();
-        echo $layout->setDirectOutput(true)->getOutput();
-    }
-
     public function template7Action()
     {
         $layout = Mage::getSingleton('core/layout');

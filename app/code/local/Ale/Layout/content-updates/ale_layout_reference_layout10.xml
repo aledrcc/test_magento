@@ -1,0 +1,9 @@
+<!--El nombre es namespace_module_controllerName_actionName-->
+
+<reference name="content">
+    <block type="core/text" name="our_message">
+        <action method="setText"><text>
+            The quick brown fox jumps over the lazy dog.
+        </text></action>
+    </block>
+</reference>

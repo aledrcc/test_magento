@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<!--app/code/local/Ale/Layout/etc/config.xml-->
+
+<config>
+
+    <modules>
+        <Ale_Layout>
+            <version>0.1.0</version>
+        </Ale_Layout>
+    </modules>
+
+    <global>
+        <blocks>
+            <ale_layout>
+                <class>Ale_Layout_Block</class>
+            </ale_layout>
+        </blocks>
+    </global>
+
+    <frontend>
+        <routers>
+            <ale_layout>
+                <use>standard</use>
+                <args>
+                    <module>Ale_Layout</module>
+                    <frontName>layout</frontName>
+                </args>
+            </ale_layout>
+        </routers>
+    </frontend>
+
+</config>
