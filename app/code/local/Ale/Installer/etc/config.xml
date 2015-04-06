@@ -21,7 +21,8 @@
             <ale_installer_setup>
                 <setup>
                     <module>Ale_Installer</module>
-                    <class>Mage_Core_Model_Resource_Setup</class>
+                    <!--<class>Mage_Core_Model_Resource_Setup</class> con este no puedo hacer $installer = $this-->
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
                 </setup>
             </ale_installer_setup>
         </resources>

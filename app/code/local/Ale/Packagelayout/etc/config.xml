@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<!--app/code/local/Ale/Packagelayout/etc/config.xml-->
+
+<!--Necesita configurar en System/Config/Design/Themes/Layout => ale_packagelayout-->
+
+<!--Lo interesante esta en app/design/frontend/rwd/ale_packagelayout/layout/local.xml-->
+
+<config>
+
+    <modules>
+        <Ale_Packagelayout>
+            <version>0.1.0</version>
+        </Ale_Packagelayout>
+    </modules>
+
+    <frontend>
+        <routers>
+            <ale_packagelayout>
+                <use>standard</use>
+                <args>
+                    <module>Ale_Packagelayout</module>
+                    <frontName>packagelayout</frontName>
+                </args>
+            </ale_packagelayout>
+        </routers>
+    </frontend>
+
+</config>

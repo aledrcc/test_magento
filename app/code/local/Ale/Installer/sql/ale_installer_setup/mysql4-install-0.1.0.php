@@ -18,10 +18,13 @@
 //'note'            => $this->_getValue($attr, 'note'),
 //'is_global'       => $this->_getValue($attr, 'global', 1),
 
-$installer = Mage::getResourceModel('catalog/setup','default_setup');
-/* @var $installer Mage_Catalog_Model_Resource_Eav_Mysql4_Setup */
+//$installer = Mage::getResourceModel('catalog/setup','default_setup'); //Necesario si la class es Mage_Core_Model_Resource_Setup
+$installer = $this; //Para funcionar asi necesita q la class sea Mage_Catalog_Model_Resource_Setup
+/* @var $installer Mage_Catalog_Model_Resource_Setup */
 
-/*
+/* @ v a r  $installer Mage_Catalog_Model_Resource_Eav_Mysql4_Setup */
+
+/**/
 $installer->startSetup();
 $installer->removeAttribute('catalog_product', 'probando_text');
 $installer->removeAttribute('catalog_product', 'probando_textarea');
@@ -29,67 +32,72 @@ $installer->removeAttribute('catalog_product', 'probando_select');
 $installer->removeAttribute('catalog_product', 'probando_yesnoselect');
 $installer->removeAttribute('catalog_product', 'probando_multiselect');
 $installer->endSetup();
-*/
+/**/
 
 $installer->startSetup();
 
 //TEXT
-$data = array(
-    'type'              => 'varchar', //'backend_type'
-    'input'             => 'text', //'frontend_input'
-    'label'             => 'Probando un atributo Text', //'frontend_label'
-    'required'          => 0, //'is_required', defaults to 1
-    'visible_on_front'  => 1
+$installer->addAttribute(Mage_Catalog_Model_Category::ENTITY,
+    'probando_text', array(
+        'type'              => 'varchar', //'backend_type'
+        'input'             => 'text', //'frontend_input'
+        'label'             => 'Probando un atributo Text', //'frontend_label'
+        'group'             => 'General',
+        'required'          => 0, //'is_required', defaults to 1
+        'visible_on_front'  => 1
+    )
 );
-
-$installer->addAttribute('catalog_product', 'probando_text', $data);
 
 //TEXTAREA
-$data = array(
-    'type'              => 'text', //'backend_type'
-    'input'             => 'textarea', //'frontend_input'
-    'label'             => 'Probando un atributo Text Area', //'frontend_label'
-    'required'          => 0, //'is_required', defaults to 1
-    'visible_on_front'  => 1
+$installer->addAttribute(Mage_Catalog_Model_Category::ENTITY,
+    'probando_textarea', array(
+        'type'              => 'text', //'backend_type'
+        'input'             => 'textarea', //'frontend_input'
+        'label'             => 'Probando un atributo Text Area', //'frontend_label'
+        'group'             => 'General',
+        'required'          => 0, //'is_required', defaults to 1
+        'visible_on_front'  => 1
+    )
 );
-
-$installer->addAttribute('catalog_product', 'probando_textarea', $data);
 
 //SELECT
-$data = array(
-    'type'              => 'int', //'backend_type'
-    'input'             => 'select', //'frontend_input'
-    'label'             => 'Probando un atributo Select', //'frontend_label'
-    'source'            => 'ale_installer/entity_attribute_source_select', //'source_model'
-    'required'          => 0, //'is_required', defaults to 1
-    'visible_on_front'  => 1
+$installer->addAttribute(Mage_Catalog_Model_Category::ENTITY,
+    'probando_select', array(
+        'type'              => 'int', //'backend_type'
+        'input'             => 'select', //'frontend_input'
+        'label'             => 'Probando un atributo Select', //'frontend_label'
+        'source'            => 'ale_installer/entity_attribute_source_select', //'source_model'
+        'group'             => 'General',
+        'required'          => 0, //'is_required', defaults to 1
+        'visible_on_front'  => 1
+    )
 );
-
-$installer->addAttribute('catalog_product', 'probando_select', $data);
 
 //YES/NO SELECT
-$data = array(
-    'type'              => 'int', //'backend_type'
-    'input'             => 'select', //'frontend_input'
-    'label'             => 'Probando un atributo Yes/No Select', //'frontend_label'
-    'source'            => 'eav/entity_attribute_source_boolean',
-    'required'          => 0, //'is_required', defaults to 1
-    'visible_on_front'  => 1
+$installer->addAttribute(Mage_Catalog_Model_Category::ENTITY,
+    'probando_yesnoselect', array(
+        'type'              => 'int', //'backend_type'
+        'input'             => 'select', //'frontend_input'
+        'label'             => 'Probando un atributo Yes/No Select', //'frontend_label'
+        'source'            => 'eav/entity_attribute_source_boolean',
+        'group'             => 'General',
+        'required'          => 0, //'is_required', defaults to 1
+        'visible_on_front'  => 1
+    )
 );
-
-$installer->addAttribute('catalog_product', 'probando_yesnoselect', $data);
 
 //MULTISELECT
-$data = array(
-    'type'              => 'varchar', //'backend_type'
-    'input'             => 'multiselect', //'frontend_input'
-    'label'             => 'Probando un atributo Multiselect', //'frontend_label'
-    'backend'           => 'eav/entity_attribute_backend_array',
-    'source'            => 'ale_installer/entity_attribute_source_multiselect',
-    'required'          => 0, //'is_required', defaults to 1
-    'visible_on_front'  => 1
+$installer->addAttribute(Mage_Catalog_Model_Category::ENTITY,
+    'probando_multiselect', array(
+        'type'              => 'varchar', //'backend_type'
+        'input'             => 'multiselect', //'frontend_input'
+        'label'             => 'Probando un atributo Multiselect', //'frontend_label'
+        'backend'           => 'eav/entity_attribute_backend_array',
+        'source'            => 'ale_installer/entity_attribute_source_multiselect',
+        'group'             => 'General',
+        'required'          => 0, //'is_required', defaults to 1
+        'visible_on_front'  => 1
+    )
 );
-
-$installer->addAttribute('catalog_product', 'probando_multiselect', $data);
 
 $installer->endSetup();

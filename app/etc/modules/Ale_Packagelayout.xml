@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Ale_Packagelayout>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Ale_Packagelayout>
+    </modules>
+</config>
