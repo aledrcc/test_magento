@@ -24,7 +24,7 @@ $installer = $this; //Para funcionar asi necesita q la class sea Mage_Catalog_Mo
 
 /* @ v a r  $installer Mage_Catalog_Model_Resource_Eav_Mysql4_Setup */
 
-/**/
+/*
 $installer->startSetup();
 $installer->removeAttribute('catalog_product', 'probando_text');
 $installer->removeAttribute('catalog_product', 'probando_textarea');
