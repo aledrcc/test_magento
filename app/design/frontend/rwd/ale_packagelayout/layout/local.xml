@@ -36,4 +36,39 @@
         <update handle="ale_packagelayout_package_second" />
     </ale_packagelayout_package_both>
 
+    <ale_packagelayout_order_index>
+        <reference name="content">
+            <block type="core/text" name="one">
+                <action method="setText">
+                    <text><![CDATA[<p>One</p>]]></text>
+                </action>
+            </block>
+            <block type="core/text" name="two">
+                <action method="setText">
+                    <text><![CDATA[<p>Two</p>]]></text>
+                </action>
+            </block>
+            <block type="core/text" name="three">
+                <action method="setText">
+                    <text><![CDATA[<p>Three</p>]]></text>
+                </action>
+            </block>
+            <block type="core/text" name="four">
+                <action method="setText">
+                    <text><![CDATA[<p>Four</p>]]></text>
+                </action>
+            </block>
+            <block type="core/text" name="line" before="two">
+                <action method="setText">
+                    <text><![CDATA[<hr/>]]></text>
+                </action>
+            </block>
+            <block type="core/text" name="linetwo" after="two">
+                <action method="setText">
+                    <text><![CDATA[<hr/>]]></text>
+                </action>
+            </block>
+        </reference>
+    </ale_packagelayout_order_index>
+
 </layout>
